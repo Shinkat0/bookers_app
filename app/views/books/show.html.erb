@@ -2,10 +2,16 @@
   <p><%= flash[:notice] %></p>
 <% end %>
 
-<h2>Title:</h2>
-<p><%= @book.title %></p>
-<h2>Body:</h2>
-<p><%= @book.body %></p>
+<table width="80%" style="font-size: 14px; line-height: 200%; margin: 20px 0 20px 40px; line-height: 200%;">
+  <tr>
+    <td width="10%" style="font-weight:bold;  ">Title:<td width="90%"><%= @book.title %></td>
+  </tr>
+  <tr>
+    <td width="10%" style="font-weight:bold;  ">Body:</td><td width="90%"><%= @book.body %></td>
+  </tr>
+</table>
 
+<br>
 <%= link_to "edit",edit_book_path %>
 <%= link_to "back",books_path %>
+
